@@ -1,0 +1,9 @@
+C:\hankk\Examples\DesignPattern\DesignPattern\bin\Debug\netcoreapp1.1\DesignPattern.deps.json
+C:\hankk\Examples\DesignPattern\DesignPattern\bin\Debug\netcoreapp1.1\DesignPattern.runtimeconfig.json
+C:\hankk\Examples\DesignPattern\DesignPattern\bin\Debug\netcoreapp1.1\DesignPattern.runtimeconfig.dev.json
+C:\hankk\Examples\DesignPattern\DesignPattern\obj\Debug\netcoreapp1.1\DesignPattern.csprojResolveAssemblyReference.cache
+C:\hankk\Examples\DesignPattern\DesignPattern\obj\Debug\netcoreapp1.1\DesignPattern.AssemblyInfo.cs
+C:\hankk\Examples\DesignPattern\DesignPattern\bin\Debug\netcoreapp1.1\DesignPattern.dll
+C:\hankk\Examples\DesignPattern\DesignPattern\bin\Debug\netcoreapp1.1\DesignPattern.pdb
+C:\hankk\Examples\DesignPattern\DesignPattern\obj\Debug\netcoreapp1.1\DesignPattern.dll
+C:\hankk\Examples\DesignPattern\DesignPattern\obj\Debug\netcoreapp1.1\DesignPattern.pdb
