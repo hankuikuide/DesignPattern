@@ -52,23 +52,23 @@ namespace DesignPattern.DesignPattern
         }
     }
 
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.OutputEncoding = Encoding.UTF8;
+    //class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        Console.OutputEncoding = Encoding.UTF8;
 
-            var plane = TravelFactory.Create("Plane");
-            plane.Show();
+    //        var plane = TravelFactory.Create("Plane");
+    //        plane.Show();
 
-            var train = TravelFactory.Create("Train");
+    //        var train = TravelFactory.Create("Train");
 
-            train.Show();
-            var bus = TravelFactory.Create("Bus");
+    //        train.Show();
+    //        var bus = TravelFactory.Create("Bus");
 
-            bus.Show();
+    //        bus.Show();
 
-            Console.ReadKey();
-        }
-    }
+    //        Console.ReadKey();
+    //    }
+    //}
 }
