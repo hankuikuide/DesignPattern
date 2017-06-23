@@ -1,89 +1,61 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace DesignPattern
 {
-    /// <summary>
-    /// 付款 抽象类
-    /// </summary>
-    public abstract class AbstractPayment
+    public abstract class TravelFactory
     {
-        /// <summary>
-        /// 第一步：设计请求参数
-        /// </summary>
-        protected abstract void Request();
+        public abstract Travel Create();
+    }
 
-        /// <summary>
-        /// 第二步：排序
-        /// </summary>
-        protected abstract void Sort();
-
-        /// <summary>
-        /// 第三步：加密码
-        /// </summary>
-        protected abstract void Encrypt();
-
-        /// <summary>
-        /// 模板方法：付款
-        /// </summary>
-        public void Pay()
+    public class PlaneFactory : TravelFactory
+    {
+        public override Travel Create()
         {
-            Request();
-            Sort();
-            Encrypt();
-            Console.WriteLine("付款请求已发送");
+            return new Plane();
         }
     }
 
-    public class AliPayment : AbstractPayment
+    public class TrainFactory : TravelFactory
     {
-        protected override void Encrypt()
+        public override Travel Create()
         {
-            Console.WriteLine("AliPay 请求加密 ");
-        }
-
-        protected override void Request()
-        {
-            Console.WriteLine("AliPay 构造请求参数 ");
-        }
-
-        protected override void Sort()
-        {
-            Console.WriteLine("AliPay 参数排序 ");
-
+            return new Train();
         }
     }
 
-    public class WeiXinPay : AbstractPayment
+    public abstract class Travel
     {
-        protected override void Encrypt()
-        {
-            Console.WriteLine("WeiXinPay 参数加密");
-        }
+        public abstract void Show();
+    }
 
-        protected override void Request()
+    public class Plane : Travel
+    {
+        public override void Show()
         {
-            Console.WriteLine("WeiXinPay 构造请求参数");
-        }
-
-        protected override void Sort()
-        {
-            Console.WriteLine("WeiXinPay 参数排序");
+            Console.WriteLine("Plane for Travel");
         }
     }
+    public class Train : Travel
+    {
+        public override void Show()
+        {
+            Console.WriteLine("Train for Travel");
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
+            
+            TravelFactory planeFactory = new PlaneFactory();
+            planeFactory.Create().Show();
 
-            AbstractPayment aliPay = new AliPayment();
-            aliPay.Pay();
-
-            Console.WriteLine("-----------------分界线------------------");
-
-            AbstractPayment weixinPay = new WeiXinPay();
-            weixinPay.Pay();
+            TravelFactory trainFactory = new TrainFactory();
+            trainFactory.Create().Show();
 
             Console.ReadKey();
         }
